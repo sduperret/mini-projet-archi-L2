@@ -1,0 +1,68 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{url}
+
+
+\title{MINI-PROJET AVEC L'ARCHITECTURE Y86}
+\author{Nathan VANBESELAERE, Sacha DUPERRET}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Rapport détaillant le travail effectué en binôme pour adapter l'architecture Y86 aux consignes.
+\end{abstract}
+
+\tableofcontents
+
+\section{Exercice 1}
+\textit{Code disponible "Exercice1.json"}
+\subsection{Question 1}
+
+Nous supprimons l'instruction :
+\begin{verbatim}
+    intsig MRMOVL                   'instructionSet.get("mrmovl").icode'
+\end{verbatim}
+Nous modifions également l'instruction set pour que RMMOVL ait un icode = 4 et ifun = 0, et MRMOVL un icode = 4 avec un ifun = 1.
+Le code source Y86 compile bien, le code hexadécimal est bien de 40 et 41 pour RMMOVL (ifun = 0) et RMMOVL (ifun = 1) respectivement.
+
+\subsection{Question 2}
+Nous supprimons l'ensemble des occurences de MRMOVL.
+Dans les cas où MRMOVL était dissocié de RMMOVL, nous ajoutons l'instruction :
+\begin{verbatim}
+    || icode == RMMOVL && ifun == 1
+\end{verbatim}
+permettant ainsi d'exécuter correctement les instructions demandées.
+
+\section{Exercice 2}
+\textit{Code disponible "Exercice2.json"}
+\subsection{Question 1}
+Nous modifions le instruction set en ajoutant STRGL avec un icode = 14 et un ifun = 0.
+\subsection{Question 2}
+Nous ajoutons l'instruction
+\begin{verbatim}
+    intsig STRGL                     'instructionSet.get("strgl").icode'
+\end{verbatim}
+permettant de donner un icode à l'instruction STRGL.
+
+\section{Exercice 3}
+\textit{Code disponible "Exercice3.json"}
+\subsection{Question 1}
+
+\subsection{Question 2}
+
+\section{Exercice 4}
+\textit{Code disponible "Exercice4.json"}
+\subsection{Question 1}
+
+\subsection{Question 2}
+
+\end{document}
+

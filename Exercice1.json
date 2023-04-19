@@ -1,0 +1,220 @@
+{
+"machineState" : {
+"kernel" : "0",
+"compilationResult" : {"output":"  0x0000:                |  |  .pos 0 \n  0x0000: 30f400010000   |  |  init:      irmovl stack,%esp \n  0x0006: 410f5c000000   |  |      mrmovl n,%eax \n  0x000c: a00f           |  |      pushl %eax \n  0x000e: 30f064000000   |  |      irmovl t,%eax \n  0x0014: a00f           |  |      pushl %eax \n  0x0016: 8028000000     |  |      call sum \n  0x001b: c0f408000000   |  |      iaddl 8,%esp \n  0x0021: 400f60000000   |  |      rmmovl %eax,s \n  0x0027: 10             |  |      halt  \n                         |  |  \n  0x0028: a03f           |  |  sum:      pushl %ebx \n  0x002a: 412408000000   |  |      mrmovl 8(%esp),%edx \n  0x0030: 41140c000000   |  |      mrmovl 12(%esp),%ecx \n  0x0036: 6300           |  |      xorl %eax,%eax \n  0x0038: 6211           |  |      andl %ecx,%ecx \n  0x003a: 7358000000     |  |      je end \n  0x003f: 413200000000   |  |  loop:      mrmovl (%edx),%ebx \n  0x0045: 6030           |  |      addl %ebx,%eax \n  0x0047: c0f204000000   |  |      iaddl 4,%edx \n  0x004d: c1f101000000   |  |      isubl 1,%ecx \n  0x0053: 743f000000     |  |      jne loop \n  0x0058: b03f           |  |  end:      popl %ebx \n  0x005a: 90             |  |      ret  \n                         |  |  \n  0x005b:                |  |  .align 4 \n  0x005c: 04000000       |  |  n:  .long 4 \n  0x0060: 00000000       |  |  s:  .long 0 \n  0x0064: 0a000000       |  |  t:  .long 0x000a \n  0x0068: b0000000       |  |  .long 0x00b0 \n  0x006c: 000c0000       |  |  .long 0x0c00 \n  0x0070: 00d00000       |  |  .long 0xd000 \n                         |  |  \n  0x0074:                |  |  .pos 0x100 \n  0x0100:                |  |  stack:  \n  0x0100: 00000000       |  |  .long 0 \n","errors":[],"data":{"_labelToPC":{},"_lineNumberToPc":{},"_pcToLineNumber":{}}},
+"cpuState" : {"pc":39,"valP":40,"icode":1,"ifun":0,"ra":15,"rb":15,"valC":0,"valA":0,"valB":0,"srcA":15,"srcB":15,"dstE":15,"dstM":15,"aluA":0,"aluB":0,"valE":0,"cc":0,"bcond":false,"mem_addr":0,"mem_data":0,"mem_read":false,"mem_write":false,"valM":0,"newPC":40},
+"registers" : [{"name":"%eax","value_hex":"0000dcba","value_dec":56506},{"name":"%ebx","value_hex":"00000000","value_dec":0},{"name":"%ecx","value_hex":"00000000","value_dec":0},{"name":"%edx","value_hex":"00000074","value_dec":116},{"name":"%esi","value_hex":"00000000","value_dec":0},{"name":"%edi","value_hex":"00000000","value_dec":0},{"name":"%ebp","value_hex":"00000000","value_dec":0},{"name":"%esp","value_hex":"00000100","value_dec":256}],
+"flags" : [{"name":"ZF","value":"0"},{"name":"OF","value":"0"},{"name":"SF","value":"0"}],
+"status" : [{"name":"STAT","value":"HALT"},{"name":"ERR","value":""},{"name":"PC","value":"00000027"}],
+"performance" : [],
+"memory" : {"wordSize":4,"startAddress":0,"maxAddress":8192,"words":[{"address":"00fc","value":"04000000"},{"address":"00f8","value":"64000000"},{"address":"00f4","value":"1b000000"},{"address":"0060","value":"badc0000"}]}
+},
+"editor" : "        .pos 0\ninit:   irmovl stack,%esp\n        mrmovl n,%eax\n        pushl  %eax\n        irmovl t,%eax\n        pushl  %eax\n        call   sum\n        iaddl  8,%esp\n        rmmovl %eax,s\n        halt\n\nsum:    pushl  %ebx\n        mrmovl 8(%esp),%edx\n        mrmovl 12(%esp),%ecx\n        xorl   %eax,%eax\n        andl   %ecx,%ecx\n        je     end\nloop:   mrmovl (%edx),%ebx\n        addl   %ebx,%eax\n        iaddl  4,%edx\n        isubl  1,%ecx\n        jne    loop\nend:    popl   %ebx\n        ret\n\n        .align 4\nn:      .long  4\ns:      .long  0\nt:      .long  0x000a\n        .long  0x00b0\n        .long  0x0c00\n        .long  0xd000\n\n        .pos 0x100\nstack:\n    .long 0\n",
+"instructionSet" : [
+  {
+    "name": "nop",
+    "icode": 0,
+    "ifun": 0,
+    "args": ""
+  },
+  {
+    "name": "halt",
+    "icode": 1,
+    "ifun": 0,
+    "args": ""
+  },
+  {
+    "name": "rrmovl",
+    "icode": 2,
+    "ifun": 0,
+    "args": "rA,rB"
+  },
+  {
+    "name": "irmovl",
+    "icode": 3,
+    "ifun": 0,
+    "args": "valC,rB"
+  },
+  {
+    "name": "rmmovl",
+    "icode": 4,
+    "ifun": 0,
+    "args": "rA,valC?(rB)"
+  },
+  {
+    "name": "rmmovl",
+    "icode": 4,
+    "ifun": 0,
+    "args": "rA,valC"
+  },
+  {
+    "name": "mrmovl",
+    "icode": 4,
+    "ifun": 1,
+    "args": "valC?(rB),rA"
+  },
+  {
+    "name": "mrmovl",
+    "icode": 4,
+    "ifun": 1,
+    "args": "valC,rA"
+  },
+  {
+    "name": "addl",
+    "icode": 6,
+    "ifun": 0,
+    "args": "rA,rB"
+  },
+  {
+    "name": "subl",
+    "icode": 6,
+    "ifun": 1,
+    "args": "rA,rB"
+  },
+  {
+    "name": "andl",
+    "icode": 6,
+    "ifun": 2,
+    "args": "rA,rB"
+  },
+  {
+    "name": "xorl",
+    "icode": 6,
+    "ifun": 3,
+    "args": "rA,rB"
+  },
+  {
+    "name": "sall",
+    "icode": 6,
+    "ifun": 4,
+    "args": "rA,rB"
+  },
+  {
+    "name": "sarl",
+    "icode": 6,
+    "ifun": 5,
+    "args": "rA,rB"
+  },
+  {
+    "name": "jmp",
+    "icode": 7,
+    "ifun": 0,
+    "args": "valC"
+  },
+  {
+    "name": "jle",
+    "icode": 7,
+    "ifun": 1,
+    "args": "valC"
+  },
+  {
+    "name": "jl",
+    "icode": 7,
+    "ifun": 2,
+    "args": "valC"
+  },
+  {
+    "name": "je",
+    "icode": 7,
+    "ifun": 3,
+    "args": "valC"
+  },
+  {
+    "name": "jne",
+    "icode": 7,
+    "ifun": 4,
+    "args": "valC"
+  },
+  {
+    "name": "jge",
+    "icode": 7,
+    "ifun": 5,
+    "args": "valC"
+  },
+  {
+    "name": "jg",
+    "icode": 7,
+    "ifun": 6,
+    "args": "valC"
+  },
+  {
+    "name": "call",
+    "icode": 8,
+    "ifun": 0,
+    "args": "valC"
+  },
+  {
+    "name": "ret",
+    "icode": 9,
+    "ifun": 0,
+    "args": ""
+  },
+  {
+    "name": "pushl",
+    "icode": 10,
+    "ifun": 0,
+    "args": "rA"
+  },
+  {
+    "name": "popl",
+    "icode": 11,
+    "ifun": 0,
+    "args": "rA"
+  },
+  {
+    "name": "iaddl",
+    "icode": 12,
+    "ifun": 0,
+    "args": "valC,rB"
+  },
+  {
+    "name": "isubl",
+    "icode": 12,
+    "ifun": 1,
+    "args": "valC,rB"
+  },
+  {
+    "name": "iandl",
+    "icode": 12,
+    "ifun": 2,
+    "args": "valC,rB"
+  },
+  {
+    "name": "ixorl",
+    "icode": 12,
+    "ifun": 3,
+    "args": "valC,rB"
+  },
+  {
+    "name": "isall",
+    "icode": 12,
+    "ifun": 4,
+    "args": "valC,rB"
+  },
+  {
+    "name": "isarl",
+    "icode": 12,
+    "ifun": 5,
+    "args": "valC,rB"
+  },
+  {
+    "name": "decl",
+    "icode": 13,
+    "ifun": 1,
+    "args": "rA"
+  },
+  {
+    "name": "ncall",
+    "icode": 10,
+    "ifun": 1,
+    "args": "valC"
+  },
+  {
+    "name": "nret",
+    "icode": 11,
+    "ifun": 1,
+    "args": ""
+  }
+],
+"hcl" : "####################################################################\n#  HCL Description of control for single-cycle y86 processor \"Seq\" #\n#                                                                  #\n#  Original (C) Randal E. BRYANT, David R. O'HALLARON, 2002        #\n#  Updates  (C) Alexis BANDET, Valentin GAISSET, Romain GUISSET,   #\n#               Florian SIMBA, 2020                                #\n#  Updates  (C) El Hadji Pathe FALL, Nicolas MARIN PACHE, Corentin #\n#               MERCIER, Benjamin MORO, Nathan PRECIGOUT, 2021     #\n####################################################################\n\n## Symbolic representation of y86 instruction codes ################\n\nintsig NOP                      'instructionSet.get(\"nop\").icode'\nintsig HALT                     'instructionSet.get(\"halt\").icode'\nintsig RRMOVL                   'instructionSet.get(\"rrmovl\").icode'\nintsig IRMOVL                   'instructionSet.get(\"irmovl\").icode'\nintsig RMMOVL                   'instructionSet.get(\"rmmovl\").icode'\nintsig OPL                      'instructionSet.get(\"addl\").icode'\nintsig IOPL                     'instructionSet.get(\"iaddl\").icode'\nintsig JXX                      'instructionSet.get(\"jmp\").icode'\nintsig CALL                     'instructionSet.get(\"call\").icode'\nintsig RET                      'instructionSet.get(\"ret\").icode'\nintsig PUSHL                    'instructionSet.get(\"pushl\").icode'\nintsig POPL                     'instructionSet.get(\"popl\").icode'\n\n## Symbolic representation of y86 registers referenced explicitly ##\n\nintsig RESP                     'registers.esp'         # Stack Pointer\nintsig REBP                     'registers.ebp'         # Frame Pointer\nintsig RNONE                    'registers.none'        # Special value indicating \"no register\"\n\n## ALU functions referenced explicitly #############################\n\nintsig ALUADD                   'alufct.A_ADD'          # ALU should add its arguments\n\n## Signals that can be referenced by control logic #################\n\n## Fetch stage inputs\nintsig pc                       'ctx.pc'                # Program counter\n\n## Fetch stage computations\nintsig icode                    'ctx.icode'             # Instruction control code\nintsig ifun                     'ctx.ifun'              # Instruction function\nintsig rA                       'ctx.ra'                # rA field from instruction\nintsig rB                       'ctx.rb'                # rB field from instruction\nintsig valC                     'ctx.valC'              # Constant from instruction\nintsig valP                     'ctx.valP'              # Address of following instruction\n\n## Decode stage computations\nintsig valA                     'ctx.valA'              # Value from register A port\nintsig valB                     'ctx.valB'              # Value from register B port\n\n## Execute stage computations\nintsig valE                     'ctx.valE'              # Value computed by ALU\nboolsig Bch                     'ctx.bcond'             # Branch test\n\n## Memory stage computations\nintsig valM                     'ctx.valM'              # Value read from memory\n\n####################################################################\n#    Control Signal Definitions.                                   #\n####################################################################\n\n## Fetch stage #####################################################\n\n## Does fetched instruction require a register numbers byte?\nbool need_regids =\n    icode in { RRMOVL, OPL, IOPL, PUSHL, POPL, IRMOVL, RMMOVL };\n\n## Does fetched instruction require a constant word?\nbool need_valC =\n    icode in { IRMOVL, RMMOVL, JXX, CALL, IOPL };\n\n## Is instruction valid?\nbool instr_valid =\n    icode in { NOP, HALT, RRMOVL, IRMOVL, RMMOVL,\n               OPL, IOPL, JXX, CALL, RET, PUSHL, POPL };\n\n## Decode stage ####################################################\n\n## What register should be used as the A source?\nint srcA = [\n    icode in { RRMOVL, RMMOVL, OPL, PUSHL } : rA;\n    icode in { POPL, RET } : RESP;\n    1 : RNONE;  # Don't need register for reading\n];\n\n## What register should be used as the B source?\nint srcB = [\n    icode in { OPL, IOPL, RMMOVL } : rB;\n    icode in { PUSHL, POPL, CALL, RET } : RESP;\n    1 : RNONE;  # Don't need register for reading\n];\n\n## What register should be used as the E destination?\nint dstE = [\n    icode in { RRMOVL, IRMOVL, OPL, IOPL } : rB;\n    icode in { PUSHL, POPL, CALL, RET } : RESP;\n    1 : RNONE;  # Don't need register for writing\n];\n\n## What register should be used as the M destination?\nint dstM = [\n    icode in { POPL } || icode == RMMOVL && ifun == 1 : rA;\n    1 : RNONE;  # Don't need register for writing\n];\n\n## Execute stage ###################################################\n\n## Select input A to ALU\nint aluA = [\n    icode in { RRMOVL, OPL } : valA;\n    icode in { IRMOVL, RMMOVL, IOPL } : valC;\n    icode in { CALL, PUSHL } : -4;\n    icode in { RET, POPL } : 4;\n    # Other instructions don't need ALU\n];\n\n## Select input B to ALU\nint aluB = [\n    icode in { RMMOVL, OPL, IOPL, CALL, PUSHL, RET, POPL } : valB;\n    icode in { RRMOVL, IRMOVL } : 0;\n    # Other instructions don't need ALU\n];\n\n## Set ALU function\nint alufun = [\n    icode in { OPL, IOPL } : ifun;\n    1 : ALUADD;  # Perform additions by default\n];\n\n## Should condition codes be updated?\nbool set_cc = icode in { OPL, IOPL };\n\nbool is_bch = icode in { JXX };\n\n## Memory stage ####################################################\n\n## Set read control signal\nbool mem_read =\n    icode in { POPL, RET } || icode == RMMOVL && ifun == 1;\n\n## Set write control signal\nbool mem_write =\n    icode in { RMMOVL, PUSHL, CALL };\n\n## Select memory address\nint mem_addr = [\n    icode in { RMMOVL, PUSHL, CALL } : valE;\n    icode in { POPL, RET } : valA;\n    # Other instructions don't need address\n];\n\n## Select memory input data\nint mem_data = [\n    # Value from register\n    icode in { RMMOVL, PUSHL } : valA;\n    # Return PC address\n    icode == CALL : valP;\n    # Default: Don't write anything\n];\n\n## Program Counter update ##########################################\n\n## Compute address of next instruction to be fetched\nint new_pc = [\n    # Call: Use immediate value\n    icode == CALL : valC;\n    # Taken branch:  Use immediate value\n    icode == JXX && Bch : valC;\n    # Completion of RET instruction: Use value retrieved from stack\n    icode == RET : valM;\n    # Default: Use incremented PC\n    1 : valP;\n];\n"
+}
