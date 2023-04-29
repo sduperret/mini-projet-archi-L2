@@ -43,22 +43,32 @@ permettant ainsi d'exécuter correctement les instructions demandées.
 \section{Exercice 2}
 \subsection{Question 1}
 Nous modifions le instruction set en ajoutant STRGL avec un icode = 14 et un ifun = 0.
-Nous testons cette nouvelle instruction en utilisant le code annexé ("").
+Nous testons cette nouvelle instruction en utilisant le code joint au projet (Ex1-Q1).
 \subsection{Question 2}
 Nous ajoutons l'instruction
 \begin{verbatim}
     intsig STRGL                     'instructionSet.get("strgl").icode'
 \end{verbatim}
 permettant de donner un icode à l'instruction STRGL.
+Nous testons le code avec les même instructions que précédemment. Les valeurs des signaux et les opérations réalisées sont conformes à nos attentes.
+
+\subsection{Question 3}
+Nous ajoutons l'instruction
+\begin{verbatim}
+    intsig STOSL                     'instructionSet.get("strgl").icode'
+\end{verbatim}
+permettant de donner un icode à l'instruction STOSL. Suivant la même technique que pour la question 2 de l'execrcice 1, nous factorisons les cas commun à STRGL ifun == 0 || infun == 1.
+
+\subsection{Question 4}
+Nous codons un clone de strcpy en y86. Nous la testons dans le simulateur, avec le code joint à ce rapport.
 
 \section{Exercice 3}
-\textit{Code disponible "Exercice3.json"}
 \subsection{Question 1}
+Nous ajoutons un icode de 15 avec ifun de 0 pour le code LOOP. Le code compile avec cette nouvelle instruction.
 
 \subsection{Question 2}
 
 \section{Exercice 4}
-\textit{Code disponible "Exercice4.json"}
 \subsection{Question 1}
 
 \subsection{Question 2}
