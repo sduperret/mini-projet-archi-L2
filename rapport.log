@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.9)  30 APR 2023 20:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.9)  30 APR 2023 20:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -339,7 +339,7 @@ Overfull \hbox (32.9989pt too wide) in paragraph at lines 59--59
  []
 
 
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 73--73
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 74--74
 []    \T1/lmtt/m/n/10 intsig LOOP                     'instructionSet.get("loop").icode'[] 
  []
 
@@ -354,9 +354,9 @@ Here is how much of TeX's memory you used:
  28290 multiletter control sequences out of 15000+600000
  518376 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,63p,277b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,6n,63p,277b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rapport.pdf (3 pages, 215946 bytes).
+Output written on rapport.pdf (3 pages, 218525 bytes).
 PDF statistics:
  144 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams

@@ -67,11 +67,21 @@ Nous codons un clone de strcpy en y86. Nous la testons dans le simulateur, avec 
 Nous ajoutons un icode de 15 avec ifun de 4 pour le code LOOP. Le code compile avec cette nouvelle instruction.
 
 \subsection{Question 2}
-Nous déclarons les signaux intsig LOOP et intsig RECX. Sous la forme :
+Nous déclarons les signaux LOOP et RECX. Sous la forme :
 \begin{verbatim}
     intsig LOOP                     'instructionSet.get("loop").icode'
+    intsig RECX                     'registers.ecx'
 \end{verbatim}
+
+
+Dans new\_pc nous modifions la \#Taken branch: Use immediate value.
+
+\begin{verbatim}
+    icode in { JXX, LOOP } && Bch : valC;
+\end{verbatim}
+
 Nous testons nos modifications avec ce code :
+
 \begin{verbatim}
     .pos 0
 irmovl t, %esi
@@ -82,7 +92,7 @@ boucle: lodsl %eax
         stosl %eax
         loop boucle
         halt
-        
+
 .pos 0x100
 s:  .long 5
 t:  .long 2
@@ -90,10 +100,9 @@ t:  .long 2
     .long 5
     .long 7
     .long 11
-r:  
+r:
 
 \end{verbatim}
-
 Le code compile et s'exécute sans erreur.
 
 \section{Exercice 4}
