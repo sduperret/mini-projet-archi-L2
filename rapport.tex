@@ -225,7 +225,9 @@ Nous testons la fonction avec le code suivant :
             stosl %eax
             isubl 0, %eax               #On vérifie si le tableau est vide
             jne nonvide                 #Si le tableau n'est pas encore vide
-            rmmovl %eax,-4(%edi)        #Si le tableau est vide, on ajoute un 0 à la suite de notre tableau de destination
+            rmmovl %eax,-4(%edi)        #Si le tableau est vide,
+                                        #on ajoute un 0 à la suite de notre tableau
+                                        #de destination
 
     nonvide:loopne boucle
             ret
@@ -234,7 +236,7 @@ Nous testons la fonction avec le code suivant :
     strcpy_bis: irmovl b, %esi          #Test deuxième cas
                 mrmovl 4(%esp),%edi
                 mrmovl 12(%esp),%ecx
-                jmp boucle              #On renvoie à notre boucle avec notre deuxième tableau
+                jmp boucle              #Renvoi à notre boucle avec notre 2nd tableau
 
 
     .pos 0x100
