@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.9)  30 APR 2023 21:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.9)  30 APR 2023 21:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -356,7 +356,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  60i,6n,63p,296b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rapport.pdf (5 pages, 239329 bytes).
+Output written on rapport.pdf (5 pages, 240303 bytes).
 PDF statistics:
  157 PDF objects out of 1000 (max. 8388607)
  130 compressed objects within 2 object streams
