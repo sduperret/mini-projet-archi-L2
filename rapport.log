@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.9)  30 APR 2023 22:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.9)  30 APR 2023 22:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -318,48 +318,44 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `rapport.toc'.
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 29.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 30.
  (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 31--31
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 32--32
 []    \T1/lmtt/m/n/10 intsig MRMOVL                   'instructionSet.get("mrmovl").icode'[] 
  []
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 79--79
-[]    \T1/lmtt/m/n/10 intsig STRGL                     'instructionSet.get("strgl").icode'[] 
- []
-
 [2]
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 87--87
-[]    \T1/lmtt/m/n/10 intsig STOSL                     'instructionSet.get("strgl").icode'[] 
+Overfull \hbox (27.74892pt too wide) in paragraph at lines 80--80
+[]    \T1/lmtt/m/n/10 intsig STRGL                    'instructionSet.get("lodsl").icode'[] 
  []
 
 [3]
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 148--148
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 144--144
 []    \T1/lmtt/m/n/10 intsig LOOP                     'instructionSet.get("loop").icode'[] 
  []
 
-[4]
-Overfull \hbox (43.49887pt too wide) in paragraph at lines 259--259
+[4] [5]
+Overfull \hbox (43.49887pt too wide) in paragraph at lines 255--255
 []            \T1/lmtt/m/n/10 isubl 0, %eax               #On vérifie si le tableau est vide[] 
  []
 
 
-Overfull \hbox (53.99884pt too wide) in paragraph at lines 259--259
+Overfull \hbox (53.99884pt too wide) in paragraph at lines 255--255
 []            \T1/lmtt/m/n/10 jne nonvide                 #Si le tableau n'est pas encore vide[] 
  []
 
 
-Overfull \hbox (90.74873pt too wide) in paragraph at lines 259--259
+Overfull \hbox (90.74873pt too wide) in paragraph at lines 255--255
 []                                        \T1/lmtt/m/n/10 #on ajoute un 0 à la suite de notre tableau[] 
  []
 
-[5]
-Overfull \hbox (101.2487pt too wide) in paragraph at lines 259--259
+
+Overfull \hbox (101.2487pt too wide) in paragraph at lines 255--255
 []                \T1/lmtt/m/n/10 jmp boucle              #Renvoi à notre boucle avec notre 2nd tableau[] 
  []
 
@@ -370,13 +366,13 @@ Package rerunfilecheck Info: File `rapport.out' has not changed.
 Here is how much of TeX's memory you used:
  10255 strings out of 478287
  162984 string characters out of 5849290
- 470056 words of memory out of 5000000
+ 469056 words of memory out of 5000000
  28291 multiletter control sequences out of 15000+600000
  522639 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,6n,63p,296b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rapport.pdf (6 pages, 240963 bytes).
+Output written on rapport.pdf (6 pages, 240744 bytes).
 PDF statistics:
  161 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams

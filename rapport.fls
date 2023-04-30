@@ -545,13 +545,13 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy7.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/lmsy5.tfm
 OUTPUT rapport.toc
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
-INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT rapport.aux
 INPUT ./rapport.out

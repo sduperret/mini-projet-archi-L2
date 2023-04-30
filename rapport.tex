@@ -22,6 +22,7 @@ Rapport détaillant le travail effectué en binôme pour adapter l'architecture 
 
 \tableofcontents
 
+\newpage
 \section{Exercice 1}
 \subsection{Question 1}
 
@@ -49,14 +50,14 @@ Nous testons cette nouvelle instruction en utilisant ce code :
     init:   irmovl stack,%esp
             call   test
             halt
-    
+
     test:   irmovl 3, %ecx
             strgl %ecx,%edx
             strgl %ecx,%ecx
             andl  %ecx,%ecx
             je     end
     end:    ret
-    
+
             .align 4
     n:      .long  4
     s:      .long  0
@@ -64,28 +65,23 @@ Nous testons cette nouvelle instruction en utilisant ce code :
             .long  0x00b0
             .long  0x0c00
             .long  0xd000
-    
+
             .pos 0x100
     stack:
         .long 0
-    
+
 \end{verbatim}
 L'exécution se déroulle conformément à nos attentes.
 
 \subsection{Question 2}
 Nous ajoutons l'instruction
 \begin{verbatim}
-    intsig STRGL                     'instructionSet.get("strgl").icode'
+    intsig STRGL                    'instructionSet.get("lodsl").icode'
 \end{verbatim}
 permettant de donner un icode à l'instruction STRGL.
 Nous testons le code avec les même instructions que précédemment. Les valeurs des signaux et les opérations réalisées sont conformes à nos attentes.
 
 \subsection{Question 3}
-Nous ajoutons l'instruction
-\begin{verbatim}
-    intsig STOSL                     'instructionSet.get("strgl").icode'
-\end{verbatim}
-permettant de donner un icode à l'instruction STOSL.
 Suivant la même technique que pour la question 2 de l'execrcice 1, nous factorisons les cas commun à STRGL ifun = 0 || infun = 1.
 
 \subsection{Question 4}
