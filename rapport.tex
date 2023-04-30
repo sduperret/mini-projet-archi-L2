@@ -182,7 +182,7 @@ Le code compile et s'exécute sans erreur.
 \section{Exercice 4}
 \subsection{Question 1}
 Nous ajoutons loope et loopne au jeu d'instruction (icode = 15, identique à celui de loop).
-Pour le ifun, nous attibuons :
+Pour les ifun, nous attibuons :
 \begin{itemize}
     \item loop : 0
     \item loope : 3
@@ -199,7 +199,61 @@ Pour cela, nous utilisons les fonctions codées précédemment.
 
 Nous testons la fonction avec le code suivant :
 \begin{verbatim}
-    CODE HERE
+    .pos 0
+    irmovl stack,%esp
+
+    main :  mrmovl limite, %eax         #Limite
+            pushl %eax
+
+            irmovl t, %eax              #Source
+            pushl %eax
+
+            irmovl r, %eax              #Destination
+            pushl %eax
+
+            call strcpy                 #Test premier cas
+            call strcpy_bis             #Test deuxième cas
+            iaddl 12, %esp
+            halt
+
+
+    strcpy: mrmovl 4(%esp),%edi         #Test premier cas
+            mrmovl 8(%esp),%esi
+            mrmovl 12(%esp),%ecx
+
+    boucle: lodsl %eax
+            stosl %eax
+            isubl 0, %eax               #On vérifie si le tableau est vide
+            jne nonvide                 #Si le tableau n'est pas encore vide
+            rmmovl %eax,-4(%edi)        #Si le tableau est vide, on ajoute un 0 à la suite de notre tableau de destination
+
+    nonvide:loopne boucle
+            ret
+
+
+    strcpy_bis: irmovl b, %esi          #Test deuxième cas
+                mrmovl 4(%esp),%edi
+                mrmovl 12(%esp),%ecx
+                jmp boucle              #On renvoie à notre boucle avec notre deuxième tableau
+
+
+    .pos 0x100
+    limite:  .long 4                    #Limite
+
+    t:  .long 2                         #Tableau premier cas
+        .long 3
+
+    .pos 0x120
+    b:  .long 2                         #Tableau deuxième cas
+        .long 3
+        .long 5
+        .long 7
+        .long 11
+    r:                                  #Destination
+
+    .pos 0x200
+    stack:  .long 0
+
 \end{verbatim}
 La valeur sentinelle est bien trouvée avant que le nombre de mots maximum à copier ne soit atteint. Si la valeur sentilelle se situe après le nombre de mots à copier nous trouvons le nombre total de mots en premier.
 
