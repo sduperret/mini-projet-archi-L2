@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.9)  30 APR 2023 20:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.4.9)  30 APR 2023 21:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -329,37 +329,37 @@ Overfull \hbox (32.9989pt too wide) in paragraph at lines 31--31
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 51--51
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 79--79
 []    \T1/lmtt/m/n/10 intsig STRGL                     'instructionSet.get("strgl").icode'[] 
  []
 
-
-Overfull \hbox (32.9989pt too wide) in paragraph at lines 59--59
+[2]
+Overfull \hbox (32.9989pt too wide) in paragraph at lines 87--87
 []    \T1/lmtt/m/n/10 intsig STOSL                     'instructionSet.get("strgl").icode'[] 
  []
 
-
-Overfull \hbox (22.49893pt too wide) in paragraph at lines 74--74
+[3]
+Overfull \hbox (22.49893pt too wide) in paragraph at lines 148--148
 []    \T1/lmtt/m/n/10 intsig LOOP                     'instructionSet.get("loop").icode'[] 
  []
 
-[2] [3] (./rapport.aux)
+[4] [5] (./rapport.aux)
 Package rerunfilecheck Info: File `rapport.out' has not changed.
 (rerunfilecheck)             Checksum: 04718F72DD47C8F011DCAE129AFCC669;1600.
  ) 
 Here is how much of TeX's memory you used:
- 10250 strings out of 478287
- 162943 string characters out of 5849290
+ 10254 strings out of 478287
+ 162978 string characters out of 5849290
  469056 words of memory out of 5000000
- 28290 multiletter control sequences out of 15000+600000
- 518376 words of font info for 57 fonts, out of 8000000 for 9000
+ 28291 multiletter control sequences out of 15000+600000
+ 522639 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,63p,277b,426s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on rapport.pdf (3 pages, 218525 bytes).
+ 60i,6n,63p,277b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
+Output written on rapport.pdf (5 pages, 238506 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
