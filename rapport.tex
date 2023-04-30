@@ -151,7 +151,8 @@ Nous déclarons les signaux LOOP et RECX. Sous la forme :
 Dans new\_pc nous modifions la \textit{\#Taken branch: Use immediate value}.
 
 \begin{verbatim}
-    icode in { JXX, LOOP } && Bch : valC;
+    icode in { JXX } && Bch : valC;
+    icode in { LOOP } && Bch : valC;
 \end{verbatim}
 
 Nous testons nos modifications avec ce code :
